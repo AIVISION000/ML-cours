@@ -1,0 +1,339 @@
+.raycastcom-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.raycastcom-raycastcom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(5, 1, 13, 1);
+}
+.raycastcom-divnext {
+  width: 1440px;
+  height: 1914px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.raycastcom-div-page-contentpage-content-wo-my8 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 11971.33984375px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+.raycastcom-div-containercontainere2-it7 {
+  top: 3468.360107421875px;
+  left: 118px;
+  width: 1204px;
+  height: 290.3800048828125px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.raycastcom-heading3 {
+  top: 0px;
+  left: 32px;
+  width: 1204px;
+  display: flex;
+  padding: 0 356.4100036621094px 0 356.5899963378906px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.raycastcom-div-containercontainere2-it71 {
+  gap: 24.19000244140625px;
+  top: 5198.78515625px;
+  left: 118px;
+  width: 1204px;
+  display: flex;
+  padding: 0 202px 96px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.raycastcom-p {
+  width: 800px;
+  display: flex;
+  padding: 0 0.23000001907348633px 0 0.7699999809265137px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.raycastcom-photo171849621011 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 947px;
+  position: absolute;
+}
+.raycastcom-splash4edddc9ajpg {
+  top: 951px;
+  left: 0px;
+  width: 1440px;
+  height: 1047px;
+  position: absolute;
+}
+.raycastcom-link {
+  top: 1038px;
+  left: 411px;
+  width: 386px;
+  height: 122px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(141deg, rgba(255, 91, 55, 1) 1%, rgba(171, 0, 82, 1) 100%);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+.raycastcom-span {
+  top: 71px;
+  left: 132.5px;
+  width: 236px;
+  display: flex;
+  padding: 0 0 0.09000015258789062px;
+  position: absolute;
+  align-items: flex-start;
+}
+.raycastcom-text {
+  top: 260px;
+  left: 295px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 57.20000076293945px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-text02 {
+  top: 1069px;
+  left: 484px;
+  color: #fdfbfb;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 57.2px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-text03 {
+  top: 1402px;
+  left: -667px;
+  color: rgb(255, 255, 255);
+  width: 2499px;
+  height: auto;
+  position: absolute;
+  font-size: 22px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 57.2px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-text20 {
+  top: 788px;
+  left: 405px;
+  color: rgb(255, 255, 255);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 57.2px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-pythonlogonotextsvg1 {
+  top: 1209px;
+  left: 512px;
+  width: 159px;
+  height: 174px;
+  position: absolute;
+}
+.raycastcom-text27 {
+  top: 319px;
+  left: 169px;
+  color: rgb(255, 255, 255);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 57.2px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-image {
+  width: 200px;
+  object-fit: cover;
+}
+.raycastcom-header {
+  top: -1px;
+  left: 75px;
+  width: 1204px;
+  display: flex;
+  padding: 28px 333.55999755859375px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.raycastcom-div-navbarmenua-d-wsy {
+  width: 536.8800048828125px;
+  height: 16px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.raycastcom-link1 {
+  top: 0px;
+  left: 17.5px;
+  width: 0px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+.raycastcom-link2 {
+  top: 0px;
+  left: 66.33000183105469px;
+  width: 65px;
+  display: flex;
+  padding: 0 0.0800018310546875px 0 0;
+  position: absolute;
+  align-items: center;
+}
+.raycastcom-text29 {
+  color: rgba(255, 255, 255, 0.6000000238418579);
+  height: auto;
+  font-size: 13px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-link3 {
+  top: 0px;
+  left: 163.41000366210938px;
+  width: 42px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+.raycastcom-text31 {
+  color: rgba(255, 255, 255, 0.6000000238418579);
+  height: auto;
+  font-size: 13px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-link4 {
+  gap: 5.489999771118164px;
+  top: 0px;
+  left: 234.8300018310547px;
+  width: 67px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+.raycastcom-text33 {
+  color: rgba(255, 255, 255, 0.6000000238418579);
+  height: auto;
+  font-size: 13px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-span-red-tagtag8j-cji {
+  display: flex;
+  padding: 1px 6.189998626708984px 1px 6px;
+  position: relative;
+  align-items: center;
+  border-radius: 10px;
+}
+.raycastcom-pseudomaskgroup {
+  width: 39.189998626708984px;
+  height: 15px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.raycastcom-pseudomask {
+  top: 0px;
+  left: 0px;
+  width: 39px;
+  height: 15px;
+  position: absolute;
+}
+.raycastcom-pseudo {
+  top: 0px;
+  left: 0px;
+  width: 39px;
+  height: 15px;
+  position: absolute;
+  border-radius: 10px;
+}
+.raycastcom-text35 {
+  color: rgba(255, 255, 255, 0.6000000238418579);
+  height: auto;
+  z-index: 1;
+  font-size: 12px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 13px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.raycastcom-icon {
+  width: 24px;
+  height: 24px;
+}
+.raycastcom-image1 {
+  width: 200px;
+  object-fit: cover;
+}

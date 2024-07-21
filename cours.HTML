@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lessons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-image: url("public/external/photo1719058046.png"); /* Adjusted path */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .menu {
+            width: 280px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .menu h2 {
+            margin: 0 0 10px;
+            padding: 10px 15px;
+            background-color: #2f47b46d; /* Changed to a softer green color */
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu h2:hover {
+            background-color: #2f47b46d; /* Slightly darker green for hover */
+        }
+        .submenu {
+            display: none;
+            padding-left: 10px;
+        }
+        .submenu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .submenu a:hover {
+            background-color: #2f47b46d;
+        }
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow-y: auto;
+        }
+        .content header h1 {
+            margin-top: 0;
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2f47b46d; /* Matching green color */
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #2f47b46d; /* Slightly darker green for hover */
+        }
+        section h2 {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 0;
+        }
+        section pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #2f47b46d; /* Matching green color */
+            font-size: 16px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+        .video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .quiz-button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: #2f47b46d;
+            color: #ffffff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .quiz-button:hover {
+            background-color: #2f47b46d;
+        }
+    </style>
+    <script>
+        function toggleMenu(id) {
+            var menu = document.getElementById(id);
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+
+        function showSection(content, videoUrl = null, quizUrl = null) {
+            var contentDiv = document.getElementById("content");
+            contentDiv.innerHTML = content;
+            if (videoUrl) {
+                var videoContainer = document.createElement('div');
+                videoContainer.className = 'video-container';
+                videoContainer.style.display = 'block';
+                videoContainer.innerHTML = `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                contentDiv.appendChild(videoContainer);
+            }
+            if (quizUrl) {
+                var quizButton = document.createElement('button');
+                quizButton.className = 'quiz-button';
+                quizButton.innerHTML = 'اذهب إلى الاختبار';
+                quizButton.onclick = function() {
+                    window.location.href = quizUrl;
+                };
+                contentDiv.appendChild(quizButton);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="menu">
+    <h2 onclick="toggleMenu('introMenu')">مقدمة و محتوى الدورة</h2>
+    <div id="introMenu" class="submenu">
+        <a href="#" onclick="showSection(')</pre>', 'https://www.youtube.com/embed/jylZaRW7jyw?si=EmrwiUelK3WD2__R');"> مقدمة و محتوى الدورة </a>
+    </div>
+
+
+    <h2 onclick="toggleMenu('toolsMenu')">  مراحل بناء المودل</h2>
+    <div id="toolsMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', 'https://www.youtube.com/embed/r6cDtTnYMtE?si=t2HGds0BI7Au5RgU');">   مراحل بناء المودل</a>
+
+       <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz for the introduction to Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_syntax1');">مراحل بناء نماذج تعلم الآلة </a> -->
+
+    </div>
+
+
+    <h2 onclick="toggleMenu('s1')">  طريقة تقسيم البيانات </h2>
+    <div id="s1" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', 'https://www.youtube.com/embed/sPD9g2TZl20?si=g9gmyb-ISrxiakVV');">  طريقة تقسيم البيانات </a>
+
+       <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz for the introduction to Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_syntax1');">مراحل بناء نماذج تعلم الآلة </a> -->
+
+    </div>
+
+    <h2 onclick="toggleMenu('s2')">  انواع خوارزميات تعلم الالة</h2>
+    <div id="s2" class="submenu">
+        <a href="#" onclick="showSection('<h2> </p>', 'https://www.youtube.com/embed/LSxc6496fMA?si=81LYSqDcewMMBQ-X');">   انواع خوارزميات تعلم الالة</a>
+
+       <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz for the introduction to Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_syntax1');">مراحل بناء نماذج تعلم الآلة </a> -->
+
+    </div>
+
+    <h2 onclick="toggleMenu('s3')"> 2انواع خوارزميات تعلم الالة </h2>
+    <div id="s3" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', 'https://www.youtube.com/embed/d5y1FFsHjxI?si=5mWdVyC0pe8zomlC');"> 2انواع خوارزميات تعلم الالة </a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+    <h2 onclick="toggleMenu('s4')"> regression analysisمفهوم ال</h2>
+    <div id="s4" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', 'https://www.youtube.com/embed/aNGBx0aA_JQ?si=pnWnskUuCG2HVkdU');"> regression analysisمفهوم ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+    <h2 onclick="toggleMenu('s5')"> regression analysisانواع ال</h2>
+    <div id="s5" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', 'https://www.youtube.com/embed/LSxc6496fMA?si=81LYSqDcewMMBQ-X');"> regression analysisانواع ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+    <h2 onclick="toggleMenu('s6')">  Logistic regressionمفهوم ال</h2>
+    <div id="s6" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', 'https://www.youtube.com/embed/jJKxAbOKYIo?si=FAdv5nflX59c7gNd');"> Logistic regressionمفهوم ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+    <h2 onclick="toggleMenu('s7')">  قريبا linear regressionمفهوم ال   </h2>
+    <div id="s7" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', '');"> قريبا linear regressionمفهوم ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+
+    <h2 onclick="toggleMenu('s8')">  قريبا linear regressionمشروع ال   </h2>
+    <div id="s8" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', '');"> قريبا linear regressionمشروع ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+
+    <h2 onclick="toggleMenu('s9')">  قريبا logictic regressionمشروع ال   </h2>
+    <div id="s9" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', '');"> قريبا logistic regressionمشروع ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+
+    <h2 onclick="toggleMenu('s10')">  كورس وشهادة كورسيرا قريبا   </h2>
+    <div id="s10" class="submenu">
+        <a href="#" onclick="showSection('<h2></p>', '');"> قريبا linear regressionمفهوم ال</a>
+
+        <!-- <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about comments in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_comments1');">اختبار قصير</a> -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+    <h2 onclick="toggleMenu('variablesMenu')">4. المتغيرات | Variables</h2>
+    <div id="variablesMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2>المتغيرات Variables</h2><p>Learn about variables in Python.</p>', 'https://www.youtube.com/embed/mGcGWoUahsw');">المتغيرات Variables</a>
+        <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about variables in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_variables1');">اختبار قصير</a>
+    </div>
+
+    <h2 onclick="toggleMenu('ioMenu')">5. المدخلات والمخرجات | Inputs and Outputs</h2>
+    <div id="ioMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2>المدخلات والمخرجات Inputs and Outputs</h2><p>Learn about inputs and outputs in Python.</p>', 'https://www.youtube.com/embed/by6ANedtVNc');">المدخلات والمخرجات Inputs and Outputs</a>
+    </div>
+
+    <h2 onclick="toggleMenu('dataTypesMenu')">6. أنواع البيانات والمعاملات | Data Types & Operators</h2>
+    <div id="dataTypesMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2>  أنواع البيانات</h2><p>Introduction to data types in Python.</p>', 'https://www.youtube.com/embed/na9G5g8eFqs');">  أنواع البيانات</a>
+        <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about inputs and outputs in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_datatypes1');">اختبار قصير</a>
+
+    </div>
+
+    <h2 onclick="toggleMenu('advancedDataTypesMenu')">regression analysisمفهوم ال</h2>
+    <div id="advancedDataTypesMenu" class="submenu">
+        <a href="#" onclick="showSection('regression analysisمفهوم ال','https://www.youtube.com/embed/r6cDtTnYMtE?si=t2HGds0BI7Au5RgU');"> regression analysisمفهوم ال</a>
+        
+        <a href="#" onclick="showSection('<h2>تغيير العناصر في القوائم</h2><p>Learn how to change elements in lists in Python.</p>','https://www.youtube.com/embed/luhVzfGkfHk');">تغيير العناصر في القوائم</a>
+        <a href="#" onclick="showSection('<h2>الإضافة في القوائم</h2><p>Learn how to add elements to lists in Python.</p>','https://www.youtube.com/embed/kc4uj3kG9O0');">الإضافة في القوائم</a>
+        <a href="#" onclick="showSection('<h2>الحذف في القوائم</h2><p>Learn how to remove elements from lists in Python.</p>','https://www.youtube.com/embed/8yhrBQwtuI0');">الحذف في القوائم</a>
+        <a href="#" onclick="showSection('<h2>   Tuples</h2><p>Learn about tuples in Python.</p>','https://www.youtube.com/embed/DG9A308Q4dQ');">   Tuples</a>
+        <a href="#" onclick="showSection('<h2>   Dictionary</h2><p>Learn about dictionaries in Python.</p>','https://www.youtube.com/embed/ym-Cvbzn64E');">  Dictionary</a>
+        <a href="#" onclick="showSection('<h2>1اختبار قصير</h2><p>This is a short quiz about advanced data types in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_lists1');">اختبار قصير1</a>
+        <a href="#" onclick="showSection('<h2>2اختبار قصير</h2><p>This is a short quiz about advanced data types in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_tuples1');">اختبار قصير2</a>
+        <a href="#" onclick="showSection('<h2>3اختبار قصير</h2><p>This is a short quiz about advanced data types in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_dictionaries1');">اختبار قصير3</a>
+    
+
+    </div>
+
+    <h2 onclick="toggleMenu('conditionMenu')">8. الشروط | Condition</h2>
+    <div id="conditionMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2>  If Statement</h2><p>Learn about if statements in Python.</p>', 'https://www.youtube.com/embed/25bvRMOTekM');">  If Statement</a>
+        <a href="#" onclick="showSection('<h2>   Else</h2><p>Learn about the else statement in Python.</p>', 'https://www.youtube.com/embed/xbO4YmPw5j0');">   Else</a>
+        <a href="#" onclick="showSection('<h2>  Elif</h2><p>Learn about the elif statement in Python.</p>', 'https://www.youtube.com/embed/7qNNyUIdzkg');">  Elif</a>
+        <a href="#" onclick="showSection('<h2>1اختبار قصير</h2><p>This is a short quiz about conditions in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_ifelse1');">اختبار قصير1</a>
+
+
+
+    </div>
+
+    <h2 onclick="toggleMenu('loopsMenu')">9. التكرار | Loops</h2>
+    <div id="loopsMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2> While Loop</h2><p>Learn about while loops in Python.</p>', 'https://www.youtube.com/embed/ZAv7MpxIt1U');"> While Loop</a>
+        <a href="#" onclick="showSection('<h2> For Loop</h2><p>Learn about for loops in Python.</p>', 'https://www.youtube.com/embed/nr5LhXVhiZE');"> For Loop</a>
+        <a href="#" onclick="showSection('<h2>استخدام For Loop مع Range</h2><p>Learn how to use for loops with range in Python.</p>', 'https://www.youtube.com/embed/nr5LhXVhiZE');">استخدام For Loop مع Range</a>
+        <a href="#" onclick="showSection('<h2>2اختبار قصير</h2><p>This is a short quiz about conditions in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_while_loops1');">اختبار قصير2</a>
+
+        <a href="#" onclick="showSection('<h2>3اختبار قصير</h2><p>This is a short quiz about conditions in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_for_loops1');">اختبار قصير3</a>
+    </div>
+
+    <h2 onclick="toggleMenu('functionsMenu')">10. الدوال | Functions</h2>
+    <div id="functionsMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2>   Functions</h2><p>Introduction to functions in Python.</p>', 'https://www.youtube.com/embed/re7cnyRcVH4');">   Functions</a>
+        <a href="#" onclick="showSection('<h2>استدعاء الدالة</h2><p>Learn how to call functions in Python.</p>', 'https://www.youtube.com/embed/ngRX_l7GurY');">استدعاء الدالة</a>
+        <a href="#" onclick="showSection('<h2>function with return</h2><p>Learn about the relationship between calling and defining functions in Python.</p>', 'https://www.youtube.com/embed/f-6C8DfhcTQ');">function with return</a>
+        <a href="#" onclick="showSection('<h2> استدعاء الدالة اكثر من مرة </h2><p>Learn about function parameters in Python.</p>', 'https://www.youtube.com/embed/xpYvUuXHEvQ');">استدعاء الدالة اكثر من مرة</a>
+        <a href="#" onclick="showSection('<h2>اختبار قصير</h2><p>This is a short quiz about functions in Python.</p>', null, 'https://www.w3schools.com/python/exercise.asp?filename=exercise_functions1');">اختبار قصير</a>
+    </div>
+
+    <h2 onclick="toggleMenu('projectMenu')">11. المشروع</h2>
+    <div id="projectMenu" class="submenu">
+        <a href="#" onclick="showSection(`
+            <h2>نظام تسجيل درجات الطلاب</h2>
+            <p><br>
+                نظام تسجيل درجات الطلاب.<br>
+                <br>
+                المشروع سيكون نظام تسجيل درجات الطلاب هذا النظام يستقبل اسم الطالب ويعرض الدرجة الخاصة به وإذا كان الاسم غير موجود يعرض رسالة تفيد بذلك.<br>
+                <br>
+                المتطلبات:<br>
+                <br>
+                استخدام القواميس (Dictionaries).<br>
+                <br>
+                التعامل مع الحلقات (loops).<br>
+                <br>
+                فهم كيفية عمل الشرطية (if statements)
+                <br>
+                ملاحظات:<br>
+                <br>
+                نظام تسجيل درجات الطلاب: يتكون من قاموس يحتوي على الأسماء كالمفاتيح والدرجات كقيم-
+                <br>
+                .<br>
+                التحقق من وجود الاسم: يتم التحقق من أن الاسم موجود في القاموس-
+                <br>
+                .</p>
+                البحث عن الدرجة: يتم البحث عن درجة الطالب من خلال اسمه في القاموس-
+                <br>
+                .</p>
+                واجهة المستخدم: بسيطة وتعتمد على إدخال الاسم من خلال سطر الأوامر وطباعة النتائج-
+                .</p>
+            .</p>
+            مثال على الاستخدام:</p>
+            إذا تم إدخال الاسم Amal سيتم طباعة: Amal grade is: 95.</p>
+            إذا تم إدخال اسم غير موجود، سيتم طباعة: Sorry, the student name is not found .</p>
+           
+
+
+        `);">نظام تسجيل درجات الطلاب</a>
+    </div>
+
+
+<h2 onclick="toggleMenu('proMenu')">12 كورس ومشروع كورسيرا</h2>
+    <div id="proMenu" class="submenu">
+        <a href="#" onclick="showSection('<h2> كورس ومشروع كورسيرا - الرسائل موجودة في الديسكربشن في المقطع</h2><p></p>', 'https://www.youtube.com/embed/FkV0s-iGzJU');">كورس ومشروع كورسيرا </a>
+
+    </div>
+
+
+
+-->
+</div> 
+
+
+
+<div class="content" id="content">
+    <header>
+        <h1>AI VISION</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>الذكاء الاصطناعي وتعلم الآلة</h2>
+        <p>هل ترغب في تطوير أنظمة تتعلم من البيانات وتتحسن بمرور الوقت؟ مع تعلم الآلة، يمكنك بناء أنظمة ذكية </p>
+        <p>تقوم بتحليل البيانات، اكتشاف الأنماط، واتخاذ قرارات دقيقة! تعلم الآلة هو مفتاحك لبناء تطبيقات مثل أنظمة</p>
+        <p>التوصية، التعرف على الصوت والصورة، وتحليل البيانات الكبيرة.</p>
+        <p>   انطلق في رحلتك مع دورة "الذكاء الاصطناعي وتعلم الآلة" واستكشف قوة هذه التقنية لبناء مشاريع مذهلة. لا تفوت الفرصة، وابدأ الآن!</p>
+
+
+
+    </section>
+    
+    <div id="videoContainer" class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9hxe4Z8V9Sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+</html>
